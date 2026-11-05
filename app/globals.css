@@ -2,8 +2,12 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-body {
-  background-color: #4a4640;
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
 }
 
 @utility bg-lined-paper {
