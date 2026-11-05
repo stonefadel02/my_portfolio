@@ -197,7 +197,7 @@ export default function Home() {
       {/* Main Binder/Notebook Container */}
       <div
         ref={binderRef}
-        className="relative w-[90vw] h-[70vw] sm:w-[85vw] sm:h-[62vw] lg:w-[80vw] lg:h-[58vw] max-w-[120vh] max-h-[85vh] transition-all duration-300"
+        className="relative w-full h-[calc(100dvh-3rem)] sm:w-[85vw] sm:h-[62vw] lg:w-[80vw] lg:h-[58vw] max-w-[120vh] max-h-none sm:max-h-[85vh] transition-all duration-300"
       >
         {/* Mobile Floating Menu (perched right on the top edge of the envelope like web tabs) */}
         <div className="sm:hidden absolute -top-7 right-3 z-[130]">

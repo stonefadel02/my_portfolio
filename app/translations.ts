@@ -189,13 +189,13 @@ const en: typeof fr = {
   tabContact: "Contact",
 
   // About Section
-  aboutRole: "Full Stack AI Developer & Cloud Enthusiast",
+  aboutRole: "Full Stack Web & Mobile Developer",
   aboutBio1: "Hello there and welcome to my notebook! I built this interactive space to showcase my work and learning path.",
-  aboutBio2: "I am a Full Stack AI Developer with a Software Engineering degree from COMSATS University. I build robust, performant web applications using JavaScript, TypeScript, React, Node.js, Express, PostgreSQL, FastAPI, and Next.js, and create intelligent solutions with Generative AI and Agentic AI.",
-  aboutBio3: "I am deepening my expertise in engineering workflows with autonomous agents and LLMs. Next on my learning path is cloud architecture and scalable cloud systems.",
+  aboutBio2: "I am a Full Stack Web and Mobile Developer, holding a professional certificate from Epitech Benin University. I build robust, high-performing web applications with JavaScript, TypeScript, React, Node.js, Express, PostgreSQL, FastAPI, and Next.js, and develop mobile apps with Flutter.",
+  aboutBio3: "I am currently deepening my expertise in project management and digital marketing. The next step in my journey focuses on cloud architecture and highly scalable cloud systems.",
   aboutBio4: "Feel free to browse through my skills, projects, or drop me a line in the contact tab!",
   viewCv: "View CV",
-  location: "Islamabad, Pakistan",
+  location: "Cotonou, Benin",
 
   // Skills Section
   skillsTitle: "Skills & Education",
@@ -244,10 +244,10 @@ const en: typeof fr = {
 
   // Education
   educationHeading: "Education",
-  edu1Date: "2021 - 2025",
-  edu1Title: "BS in Software Engineering",
-  edu1Sub: "COMSATS University",
-  edu1Desc: "Focus on core programming, databases, software architecture, and algorithm design.",
+  edu1Date: "2020 - 2023",
+  edu1Title: "Electrical Engineering: Computer Systems and Software (SIL)",
+  edu1Sub: "UATM Gasa-Formation (Cotonou, Gbegamey)",
+  edu1Desc: "In-depth training in programming, databases, software architecture, and algorithm design.",
   edu2Date: "Certificate",
   edu2Title: "Microsoft AI-103 Certificate",
   edu2Desc: "Microsoft AI certification focused on applied artificial intelligence skills.",
@@ -280,21 +280,21 @@ const en: typeof fr = {
 
   // Projects Section
   projectsTitle: "Projects & Creations",
-  projectsSubtitle: "Some interesting things I have built",
+  projectsSubtitle: "Here are some notable projects I have worked on or completed.",
   demoLabel: "Try a live demo of this project:",
   codeLabel: "View the source code:",
   downloadOnLabel: "Download on:",
 
-  occyDesc: "Contributed to the development of Occy, a full-featured Applicant Tracking System (ATS) that streamlines the recruitment process for organizations. Worked across the Admin, Recruiter, and Candidate modules to implement and enhance features for job management, candidate applications, hiring workflows, interview scheduling, user management, and dashboard functionality. Developed responsive UI components, integrated REST APIs, optimized backend functionality, resolved production issues, and collaborated with the team to deliver scalable and maintainable solutions for the recruitment platform.",
-  sparkleDesc: "Sparkle is an on-demand house cleaning platform with separate customer and admin panels. Built with React, TypeScript, Tailwind CSS, and Node.js. Customers can book cleanings and pay via Stripe; admins manage bookings, staff, and platform data from a dedicated dashboard. Real-time booking updates are handled via Socket.io. Features include authentication, role-based access control, and a fully responsive UI.",
-  thinkComparedDesc: "ThinkCompared is a live electronic product comparison web application. It enables users to search and compare detailed specifications, pricing, and features of electronic products such as mobile phones, laptops, desktops, monitors, and other gadgets, helping them make informed purchase decisions.",
-  clinicalRagDesc: "A retrieval-augmented generation (RAG) assistant for healthcare systems. It utilizes FastAPI, Groq, ChromaDB, and LangChain to extract and synthesize guidelines from hospital clinical documents, providing doctors and clinical staff with fast, context-aware information.",
+  occyDesc: "Contributed to the development of Occy, a comprehensive Applicant Tracking System (ATS) that streamlines companies' recruitment processes. Worked on the Admin, Recruiter, and Candidate modules to build and improve job management, application tracking, interview scheduling, and dashboards. Developed responsive interfaces, integrated REST APIs, optimized backend performance, and fixed production bugs.",
+  sparkleDesc: "Sparkle is an on-demand home-cleaning booking platform with separate customer and admin areas. Built with React, TypeScript, Tailwind CSS, and Node.js, it lets customers book and pay online via Stripe. Administrators manage bookings, staff, and the platform from a dedicated dashboard, with real-time updates via Socket.io.",
+  thinkComparedDesc: "ThinkCompared is a live electronic product comparison web application. It lets users analyze and compare the technical specifications, prices, and features of computers, smartphones, monitors, and high-tech gadgets to make informed purchasing decisions.",
+  clinicalRagDesc: "A retrieval-augmented generation (RAG) assistant for the hospital sector. It uses FastAPI, Groq, ChromaDB, and LangChain to analyze and synthesize complex clinical guidelines, providing healthcare professionals with fast, reliable, and contextualized answers.",
   atmEnergyDesc: "A Flutter app that streamlines fuel voucher management, including voucher ordering and transfers, consumption and delivery tracking, and QR code validation.",
   atmClientDesc: "A Flutter app for individuals and businesses to request deliveries from ATM Logistics and track their parcels in real time.",
   atmDriverDesc: "A Flutter app for partner drivers to receive assignments, follow routes, and manage deliveries.",
   jsrAlternanceDesc: "A platform connecting candidates, companies, and training organizations for work-study contracts and internships in France.",
   honadiDesc: "A WordPress website for Honadi, a Beninese web development and digital communications agency helping businesses and entrepreneurs grow online.",
-  chatYamoDesc: "Built the WordPress showcase website for Chat&Yamo, presenting its dating app, features, and brand.",
+  chatYamoDesc: "Contributed to the Chat&Yamo WordPress showcase website, presenting its dating app, features, and brand.",
   centre3001Desc: "A WordPress website for Centre 3001, a Quebec clinic network specializing in low-level laser therapy and wellness support.",
   centre3001AppDesc: "A web-based management application for Centre 3001, built with React, Express, Tailwind CSS, and MongoDB.",
   stoneHoopsDesc: "A website built entirely with HTML and CSS to showcase basketball league scores, standings, and news.",
