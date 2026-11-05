@@ -32,7 +32,7 @@ export default function About() {
       </div>
 
       <a
-        href="https://morning-sea-380.linkyhost.com/"
+        href="/cv-stone-afedjou.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="rounded-lg border-2 border-stone-700 dark:border-stone-600 bg-stone-700 dark:bg-stone-800 px-5 py-2 font-kalam font-bold text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-stone-800 dark:hover:bg-stone-700 hover:shadow-md"

@@ -102,6 +102,7 @@ export default function DotPortrait({
     const mouse = { x: -9999, y: -9999, inside: false };
     let raf = 0;
     let running = true;
+    let isImageFallback = false;
 
     const image = new Image();
     image.src = src;
@@ -117,8 +118,10 @@ export default function DotPortrait({
 
     const buildParticles = () => {
       particles.length = 0;
+      isImageFallback = false;
       const { width, height } = setCanvasSize();
       if (!width || !height || !image.naturalWidth) return;
+      ctx.clearRect(0, 0, width, height);
 
       const sample = document.createElement("canvas");
       sample.width = Math.floor(width);
@@ -195,7 +198,11 @@ export default function DotPortrait({
         skinMaxY = Math.max(skinMaxY, cell.y);
       }
 
-      if (skinCount === 0) return;
+      if (skinCount === 0) {
+        ctx.drawImage(image, ox, oy, drawW, drawH);
+        isImageFallback = true;
+        return;
+      }
 
       skinCx /= skinCount;
       skinCy /= skinCount;
@@ -404,12 +411,18 @@ export default function DotPortrait({
     image.onload = () => {
       buildParticles();
       cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(draw);
+      if (!isImageFallback) {
+        raf = requestAnimationFrame(draw);
+      }
     };
 
     const onResize = () => {
       if (!image.complete) return;
       buildParticles();
+      cancelAnimationFrame(raf);
+      if (!isImageFallback) {
+        raf = requestAnimationFrame(draw);
+      }
     };
 
     canvas.addEventListener("pointerdown", onMove);
@@ -434,7 +447,7 @@ export default function DotPortrait({
   }, [src]);
 
   return (
-    <div className="relative w-[200px] h-[260px] sm:w-[230px] sm:h-[300px] md:w-[250px] md:h-[320px]">
+    <div className="relative w-[200px] h-[260px] overflow-hidden rounded-2xl sm:w-[230px] sm:h-[300px] md:w-[250px] md:h-[320px]">
       <canvas
         ref={canvasRef}
         aria-label={alt}

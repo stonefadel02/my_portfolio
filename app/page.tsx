@@ -197,19 +197,8 @@ export default function Home() {
       {/* Main Binder/Notebook Container */}
       <div
         ref={binderRef}
-        className="relative w-[92vw] max-w-[440px] h-[78dvh] max-h-[720px] sm:w-[86vw] sm:h-[62vw] sm:max-w-[950px] sm:max-h-[82vh] lg:w-[80vw] lg:h-[56vw] lg:max-w-[1100px] lg:max-h-[82vh] transition-all duration-300"
+        className="relative w-[90vw] h-[70vw] sm:w-[85vw] sm:h-[62vw] lg:w-[80vw] lg:h-[58vw] max-w-[120vh] max-h-[85vh] transition-all duration-300"
       >
-        <button
-          type="button"
-          onClick={toggleTheme}
-          aria-label={t.themeToggleAria}
-          aria-pressed={theme === "dark"}
-          className="absolute -top-7 left-2 sm:-top-8 sm:left-3 md:-top-9 z-[130] flex h-8 sm:h-10 md:h-11 items-center gap-1.5 rounded-t-lg border-x border-t border-stone-800/20 bg-white/95 px-2.5 font-permanent text-xs sm:text-sm md:text-base font-bold text-stone-800 shadow-md backdrop-blur-md transition-all hover:-translate-y-1 active:translate-y-0.5 dark:bg-stone-800 dark:text-stone-100"
-        >
-          <span aria-hidden="true">{theme === "dark" ? "☀️" : "🌙"}</span>
-          {theme === "dark" ? t.themeLight : t.themeDark}
-        </button>
-
         {/* Mobile Floating Menu (perched right on the top edge of the envelope like web tabs) */}
         <div className="sm:hidden absolute -top-7 right-3 z-[130]">
           <button
@@ -358,12 +347,27 @@ export default function Home() {
         </div>
 
         {/* Desktop Navigation Tabs + Language Tab (visible on sm and larger, sticking directly out of the envelope) */}
-        <nav aria-label={t.navAria} className="hidden sm:block absolute z-[110] w-[82%] md:w-[74%] lg:w-[68%] right-4 sm:right-6 md:right-8 -top-7 sm:-top-8 md:-top-9 h-9 sm:h-10 md:h-11">
-          <ul role="tablist" className="flex w-full h-full gap-x-1 sm:gap-x-1.5 items-end">
+        <nav aria-label={t.navAria} className="absolute inset-x-0 bottom-full h-8 translate-y-[3px] sm:h-[8%]">
+          <button
+            type="button"
+            onClick={toggleTheme}
+            aria-label={t.themeToggleAria}
+            aria-pressed={theme === "dark"}
+            className="absolute left-2 z-[30] flex h-full items-end gap-1.5 rounded-t-lg border-x border-t border-stone-800/20 bg-white/95 px-2.5 pb-1 font-permanent text-xs font-bold text-stone-800 shadow-md backdrop-blur-md transition-all dark:bg-stone-800 dark:text-stone-100 sm:hidden"
+          >
+            <span aria-hidden="true">{theme === "dark" ? "☀️" : "🌙"}</span>
+            {theme === "dark" ? t.themeLight : t.themeDark}
+          </button>
+
+          <ul role="tablist" className="absolute right-4 sm:right-6 top-0 hidden h-full w-[68%] items-end gap-x-1 sm:flex sm:gap-x-2">
             {tabs.map((tab) => {
               const isActive = activeTab === tab.id;
               return (
-                <li key={tab.id} role="presentation" className="flex-1 h-full">
+                <li
+                  key={tab.id}
+                  role="presentation"
+                  className={`relative flex-1 h-full ${isActive ? "z-[50]" : "z-[30] hover:z-[50]"}`}
+                >
                   <button
                     type="button"
                     role="tab"
@@ -371,9 +375,9 @@ export default function Home() {
                     aria-label={tab.label}
                     aria-selected={isActive}
                     className={`
-                      flex justify-center items-center h-full rounded-t-lg px-1 sm:px-2 text-xs sm:text-sm md:text-base lg:text-lg font-bold text-stone-800 shadow-md
+                      relative flex justify-center items-end h-full rounded-t-lg px-1 pb-1 sm:px-3 sm:pb-2 md:px-4 md:pb-3 text-xs sm:text-base md:text-lg lg:text-xl font-bold text-stone-800 shadow-md after:pointer-events-none after:absolute after:inset-x-0 after:-bottom-3 after:h-4 after:bg-inherit after:content-[''] ${tab.color}
                       transition-all duration-200 ease-in-out hover:-translate-y-1 active:translate-y-0.5 cursor-pointer
-                      ${tab.color} ${tab.rotate} w-full border-t border-x border-stone-800/15 font-permanent select-none
+                      ${tab.rotate} w-full border-t border-x border-stone-800/15 font-permanent select-none
                       ${isActive ? "-translate-y-1 sm:-translate-y-1.5 ring-2 ring-stone-800/20" : ""}
                     `}
                   >
@@ -384,11 +388,11 @@ export default function Home() {
             })}
 
             {/* Language Tab attached right beside other tabs on the envelope */}
-            <li role="presentation" className="flex-initial h-full">
+            <li role="presentation" className="relative z-[30] flex-initial h-full hover:z-[50]">
               <div
                 className={`
-                  flex items-center justify-center h-full rounded-t-lg px-2 sm:px-2.5 text-xs sm:text-sm md:text-base font-bold text-stone-800 shadow-md
-                  bg-violet-400 rotate-1 border-t border-x border-stone-800/15 font-permanent select-none transition-transform hover:-translate-y-1
+                  relative flex items-end justify-center h-full rounded-t-lg px-2 pb-1 sm:px-2.5 sm:pb-2 text-xs sm:text-sm md:text-base font-bold text-stone-800 shadow-md
+                  bg-violet-400 rotate-1 border-t border-x border-stone-800/15 font-permanent select-none transition-transform hover:-translate-y-1 after:pointer-events-none after:absolute after:inset-x-0 after:-bottom-3 after:h-4 after:content-[''] after:bg-violet-400
                 `}
               >
                 <button
@@ -419,6 +423,18 @@ export default function Home() {
                   EN
                 </button>
               </div>
+            </li>
+            <li role="presentation" className="relative z-[30] flex-initial h-full hover:z-[50]">
+              <button
+                type="button"
+                onClick={toggleTheme}
+                aria-label={t.themeToggleAria}
+                aria-pressed={theme === "dark"}
+                className="relative flex h-full items-end gap-1.5 rounded-t-lg border-x border-t border-stone-800/20 bg-white/95 px-2.5 pb-1 sm:pb-2 font-permanent text-xs sm:text-sm md:text-base font-bold text-stone-800 shadow-md backdrop-blur-md transition-all after:pointer-events-none after:absolute after:inset-x-0 after:-bottom-3 after:h-4 after:bg-white after:content-[''] hover:-translate-y-1 dark:bg-stone-800 dark:text-stone-100 dark:after:bg-stone-800"
+              >
+                <span aria-hidden="true">{theme === "dark" ? "☀️" : "🌙"}</span>
+                {theme === "dark" ? t.themeLight : t.themeDark}
+              </button>
             </li>
           </ul>
         </nav>
