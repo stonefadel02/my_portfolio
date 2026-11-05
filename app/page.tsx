@@ -197,7 +197,7 @@ export default function Home() {
       {/* Main Binder/Notebook Container */}
       <div
         ref={binderRef}
-        className="relative w-full h-[calc(100dvh-3rem)] sm:w-[85vw] sm:h-[62vw] lg:w-[80vw] lg:h-[58vw] max-w-[120vh] max-h-none sm:max-h-[85vh] transition-all duration-300"
+        className="relative w-[90vw] h-[90dvh] sm:h-[82dvh] xl:h-[58vw] xl:w-[80vw] max-w-none max-h-none xl:max-w-[120vh] xl:max-h-[85vh] transition-all duration-300"
       >
         {/* Mobile Floating Menu (perched right on the top edge of the envelope like web tabs) */}
         <div className="sm:hidden absolute -top-7 right-3 z-[130]">
@@ -359,7 +359,7 @@ export default function Home() {
             {theme === "dark" ? t.themeLight : t.themeDark}
           </button>
 
-          <ul role="tablist" className="absolute right-4 sm:right-6 top-0 hidden h-full w-[68%] items-end gap-x-1 sm:flex sm:gap-x-2">
+          <ul role="tablist" className="absolute right-0 top-0 hidden h-full w-full items-end gap-x-1 sm:flex sm:gap-x-2 xl:right-6 xl:w-[68%]">
             {tabs.map((tab) => {
               const isActive = activeTab === tab.id;
               return (
