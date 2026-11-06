@@ -69,6 +69,7 @@ function ProjectCard({ title, description, tags, links, accentColor, image, down
             fill
             sizes="(min-width: 768px) 220px, 100vw"
             className="object-cover group-hover:scale-105 transition-transform duration-500"
+            unoptimized
           />
         </div>
       ) : (

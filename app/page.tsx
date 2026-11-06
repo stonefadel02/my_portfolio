@@ -75,6 +75,7 @@ function PolaroidPhoto({
               sizes="(min-width: 640px) 310px, 48vw"
               className="object-cover"
               priority
+              unoptimized
             />
           </div>
         </div>
@@ -487,6 +488,7 @@ export default function Home() {
                 fill
                 sizes="(min-width: 640px) 185px, 32vw"
                 className="object-contain"
+                unoptimized
               />
             </div>
 
