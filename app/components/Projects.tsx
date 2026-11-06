@@ -176,37 +176,37 @@ export default function Projects() {
   const { t } = useLanguage();
 
   const projectList = [
-    {
-      title: "ATM Energy",
-      image: "/atm-energy.png",
-      description: t.atmEnergyDesc,
-      tags: ["Flutter", "Dart", "QR Code", "PDF"],
-      accentColor: "bg-amber-400",
-      links: [
-        { label: "Google Play", url: "https://play.google.com/store/apps/details?id=net.atmenergy.app&pcampaignid=web_share" }
-      ]
-    },
-    {
-      title: "ATM Client",
-      image: "/atm-client.png",
-      description: t.atmClientDesc,
-      tags: ["Flutter", "Dart", "Logistics", "Real-time Tracking"],
-      accentColor: "bg-sky-400",
-      links: [
-        { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.atm.client&pcampaignid=web_share" },
-        { label: "App Store", url: "https://apps.apple.com/us/app/atm-client/id6808215887?l=fr-FR" }
-      ]
-    },
-    {
-      title: "ATM Chauffeur",
-      image: "/atm-chauffeur.png",
-      description: t.atmDriverDesc,
-      tags: ["Flutter", "Dart", "Maps", "Logistics"],
-      accentColor: "bg-emerald-500",
-      links: [
-        { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.atm.driver&pcampaignid=web_share" }
-      ]
-    },
+    // {
+    //   title: "ATM Energy",
+    //   image: "/atm-energy.png",
+    //   description: t.atmEnergyDesc,
+    //   tags: ["Flutter", "Dart", "QR Code", "PDF"],
+    //   accentColor: "bg-amber-400",
+    //   links: [
+    //     { label: "Google Play", url: "https://play.google.com/store/apps/details?id=net.atmenergy.app&pcampaignid=web_share" }
+    //   ]
+    // },
+    // {
+    //   title: "ATM Client",
+    //   image: "/atm-client.png",
+    //   description: t.atmClientDesc,
+    //   tags: ["Flutter", "Dart", "Logistics", "Real-time Tracking"],
+    //   accentColor: "bg-sky-400",
+    //   links: [
+    //     { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.atm.client&pcampaignid=web_share" },
+    //     { label: "App Store", url: "https://apps.apple.com/us/app/atm-client/id6808215887?l=fr-FR" }
+    //   ]
+    // },
+    // {
+    //   title: "ATM Chauffeur",
+    //   image: "/atm-chauffeur.png",
+    //   description: t.atmDriverDesc,
+    //   tags: ["Flutter", "Dart", "Maps", "Logistics"],
+    //   accentColor: "bg-emerald-500",
+    //   links: [
+    //     { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.atm.driver&pcampaignid=web_share" }
+    //   ]
+    // },
     {
       title: "JSR-Alternance",
       image: "/jsr.png",
